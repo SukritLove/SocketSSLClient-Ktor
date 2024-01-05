@@ -34,7 +34,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun AppScreen() {
 
-    var inputIpAddress by remember { mutableStateOf("") }
+    var inputIpAddress by remember { mutableStateOf("192.168.101.149") }
     var inputPort by remember { mutableStateOf("4001") }
     var inputMessage by remember { mutableStateOf("") }
     var clientStarted by remember { mutableStateOf(true) }
