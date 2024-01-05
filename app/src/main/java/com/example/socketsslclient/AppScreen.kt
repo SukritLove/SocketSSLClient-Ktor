@@ -37,7 +37,7 @@ fun AppScreen() {
     var inputIpAddress by remember { mutableStateOf("192.168.101.149") }
     var inputPort by remember { mutableStateOf("4001") }
     var inputMessage by remember { mutableStateOf("") }
-    var clientStarted by remember { mutableStateOf(true) }
+    var clientStarted by remember { mutableStateOf(false) }
     val textReceive: MutableState<String?> = remember { mutableStateOf("") }
 
     LaunchedEffect(clientStarted) {
@@ -51,7 +51,7 @@ fun AppScreen() {
                     port = inputPort.toInt(),
                     textReceive = textReceive
                 )
-                clientStarted = !clientStarted
+               clientStarted = !clientStarted
             }
 
         }
@@ -105,7 +105,7 @@ fun AppScreen() {
 
         Spacer(modifier = Modifier.padding(10.dp))
         CreateButton(btnText = "Send Message", onClickAction = {
-            clientStarted = !clientStarted
+          clientStarted = !clientStarted
         })
     }
 }

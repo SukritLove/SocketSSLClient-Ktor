@@ -1,3 +1,4 @@
+val ktor_version = "2.3.7"
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -67,10 +68,10 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation("io.ktor:ktor-network:3.0.0-beta-1")
-    implementation("io.ktor:ktor-network-tls:3.0.0-beta-1")
-    implementation("io.ktor:ktor-network-tls-certificates:3.0.0-beta-1")
+    implementation("io.ktor:ktor-network:$ktor_version")
+    implementation("io.ktor:ktor-network-tls:$ktor_version")
+    implementation("io.ktor:ktor-network-tls-certificates:$ktor_version")
 
-    implementation("io.ktor:ktor-client-core:3.0.0-beta-1")
-    implementation("io.ktor:ktor-client-cio:3.0.0-beta-1")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-cio:$ktor_version")
 }
